@@ -1,9 +1,12 @@
 # AGENTS.md — app-builder-skills
 
-Standing rule, set 2026-10-25, updated with Archify and the
-Hermes learning loop the same day: whenever we are making an
-app, use all eight skills in this repo, in the order in
-`docs/APP_WORKFLOW.md`.
+Standing rule, set 2026-10-25, updated with Archify, the
+Hermes learning loop, and four more the same day: whenever
+we are making an app, use all twelve skills in this repo,
+in the order in `docs/APP_WORKFLOW.md`. The four newest
+are supporting skills (see §§9–12), not extra workflow
+steps: they guard summaries, browser work, app config,
+and memory.
 This file is the short version. The full texts are in `skills/`.
 
 ## 1. Research first — agent-reach
@@ -130,6 +133,53 @@ explicit approval for that exact file list. Full text:
 `skills/hermes-learning-loop/SKILL.md`. Hermes itself —
 its code, agent, gateway, and runtime — is not bundled
 here; only its learning loop is adapted.
+
+## 9. Compaction guard — Pi auto-compact (reference only)
+
+Pi auto-compact is deprecated and archived; Pi 0.86+
+compacts natively, and nothing here installs it for Pi
+or for Muse. Keep its one rule: a summary, handoff, or
+compaction must never make unfinished work sound
+finished. Every pending check, tentative finding,
+blocker, and unresolved question stays in the summary,
+explicitly. Full note: `skills/pi-auto-compact/SKILL.md`.
+
+## 10. Browser fallback — BrowserMCP (capability only)
+
+Muse's browser is the default. BrowserMCP (MCP server +
+Chrome extension, using the user's own logged-in browser
+profile) is used only when Muse's browser cannot do a
+task, and only with the user's explicit approval for
+that task. It installs nothing by being in this repo,
+and it is never used to bypass a site's protections,
+paywall, or DRM, or to act on someone else's account.
+Full note: `skills/browsermcp/SKILL.md`.
+
+## 11. App config, not Muse secrets — SafeEnv (reference only)
+
+SafeEnv is a self-hosted Go + React web app for
+managing a project's environment variables. It is not
+a replacement for the Secure Vault, and it is not
+where Muse's secrets go. It may fit only an app being
+built that needs its own team-facing config store,
+self-hosted, with no real value ever committed or
+written in docs. If in doubt, the Secure Vault wins.
+Full note: `skills/safeenv/SKILL.md`.
+
+## 12. Local memory bank — Hindsight local
+
+Hindsight local (retain / recall / reflect via
+`hindsight-embed`, local bank only — not cloud, not a
+shared server) backs the learn step: recall before a
+non-trivial task, retain learnings and procedure
+outcomes immediately, reflect to synthesise context.
+It requires Hindsight to be installed and configured
+with an LLM provider; that setup, and any API key it
+needs, is a separate user-approved step and never
+goes in a repo. It does not replace the Hermes
+learning loop or Muse's own memory — it is a second
+bank, used only once installed. Full skill:
+`skills/hindsight-local/SKILL.md`.
 
 ## End of every coding reply
 

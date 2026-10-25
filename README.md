@@ -1,6 +1,6 @@
 # app-builder-skills
 
-One repo, eight skills, used for every app we build.
+One repo, twelve skills, used for every app we build.
 
 This is not a framework and not a code library. It is the working
 agreement: how research is done, how a reference app is studied, how
@@ -12,7 +12,7 @@ Copy this repo (or its `AGENTS.md`) into a new app project, fill in
 `docs/APP_WORKFLOW.md` in order. Do not skip a step because it is
 familiar, and do not add a step nobody asked for.
 
-## The eight skills
+## The twelve skills
 
 | Skill | What it does | When it runs | Source |
 | --- | --- | --- | --- |
@@ -24,6 +24,10 @@ familiar, and do not add a step nobody asked for.
 | Archify | Validated architecture, workflow, sequence, data-flow, lifecycle, ERD, class, tree, timeline, and waterfall diagrams as standalone HTML, plus one-page explainers | Diagram the planned system before building, and the finished system for docs | https://github.com/tt-a1i/archify |
 | Humanizer | Remove signs of AI writing (26 patterns), keep every supported claim, never invent a fact | User-facing prose only | https://github.com/blader/humanizer |
 | Hermes learning loop | Search memory first, capture durable learning, turn a recurring pattern into a skill, improve skills in use, prune what is superseded | After every build, before shipping | Inspired by https://github.com/NousResearch/hermes-agent — loop only, no Hermes code or runtime bundled |
+| Pi auto-compact | Never let a summary make unfinished work sound finished; keep every pending check, blocker, and unresolved question | Every summary and handoff, in long sessions | https://github.com/tmustier/pi-auto-compact — deprecated, archived, Pi 0.86+ native; reference note only, nothing installed |
+| BrowserMCP | Automate the user's own logged-in browser via MCP, only when Muse's browser cannot do the job | Browser tasks needing the user's own profile, with explicit approval | https://github.com/browsermcp/mcp — capability note only, nothing installed |
+| SafeEnv | Self-hosted web app for managing a project's environment variables, with guardrails | An app's own config only, never Muse's secrets | https://github.com/david-mwas/safeenv — reference note only, nothing installed or stored |
+| Hindsight local | Retain / recall / reflect: store learnings and recall context before tasks, via a local Hindsight bank | Memory, alongside the Hermes loop, once Hindsight is installed | https://github.com/vectorize-io/hindsight — local skill only, not cloud or self-hosted server |
 
 Full skill texts are in `skills/`. Each skill keeps its own upstream
 licence (six MIT, Archify Apache-2.0); the Hermes learning-loop
@@ -57,13 +61,17 @@ Notes, learned the hard way:
 
 ## How to use this repo for a new app
 
-1. Read `AGENTS.md`. It is the short version of all eight skills.
+1. Read `AGENTS.md`. It is the short version of all twelve skills.
 2. Fill in `templates/APP_BRIEF.md` — job, audience, material,
    platform, what is out of scope. If an answer is unknown, write
    UNKNOWN, do not guess.
 3. Follow `docs/APP_WORKFLOW.md` in order: research → study →
    plan → diagram → build smallest → design check → copy check
-   → verify → learn → ship (only with approval).
+   → verify → learn → ship (only with approval). The four
+   newest skills are supporting, not new steps: Pi
+   auto-compact guards every summary, BrowserMCP is a
+   fallback browser tool, SafeEnv covers an app's own
+   config, Hindsight local backs the learn step.
 4. Use `docs/CHECKLIST.md` before any push or release.
 5. End every coding reply with: what was skipped or not checked,
    and any risk the user must know. A known shortcut gets a

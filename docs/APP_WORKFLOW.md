@@ -1,4 +1,4 @@
-# App workflow — use all eight skills, in this order
+# App workflow — use all twelve skills, in this order
 
 Do not skip a step because it is familiar. Do not add a step
 nobody asked for. If a step does not apply to this app, write
@@ -93,8 +93,21 @@ code/data/links unchanged.
   cover it (e.g. load unpacked in Chrome, install on a device).
 - No secrets in the diff. No seeded/simulated data presented
   as live. No TODO left that the user did not agree to defer.
+- Browser tasks: Muse's browser is the default. BrowserMCP
+  is a fallback only, with the user's explicit approval,
+  for a task that needs their own logged-in browser profile.
 
-## 9. Learn (Hermes learning loop)
+## 9. Learn (Hermes learning loop + Hindsight local)
+
+- Hindsight local, once installed: recall before a
+  non-trivial task, retain learnings and procedure
+  outcomes immediately, reflect to synthesise context.
+  Until it is installed, this step runs on Muse's own
+  memory and the Hermes loop alone — Hindsight is
+  never a blocker, and its setup is never assumed done.
+- Pi auto-compact rule, at every handoff and summary:
+  unfinished work stays unfinished in writing — pending
+  checks, blockers, and unresolved questions included.
 
 - Search memory and past work before starting — that step
   runs first in practice, even though this step records

@@ -58,6 +58,18 @@ A checked box without evidence is not checked.
       skill repaired — proposed, not silently added
 - [ ] Superseded claims pruned from active summaries
 
+## Supporting skills
+
+- [ ] Summaries and handoffs keep unfinished work unfinished
+      (Pi auto-compact rule)
+- [ ] Browser work used Muse's browser by default; any
+      BrowserMCP use was explicitly approved for that task
+- [ ] No real secret in the diff, in a sample, or in a
+      SafeEnv-style config store; Muse's secrets went
+      through the Secure Vault, app config is separate
+- [ ] Hindsight local, if installed: recall before the task,
+      retain after it; if not installed, not assumed done
+
 ## Ship
 
 - [ ] Success criteria from the brief, verified one by one
