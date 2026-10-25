@@ -1,10 +1,10 @@
 # app-builder-skills
 
-One repo, six skills, used for every app we build.
+One repo, eight skills, used for every app we build.
 
 This is not a framework and not a code library. It is the working
 agreement: how research is done, how a reference app is studied, how
-code is written, how a page is designed, and how copy is written —
+code is written, how a system is diagrammed, how a page is designed, how copy is written, and how what is learned is kept —
 before, during, and after building.
 
 Copy this repo (or its `AGENTS.md`) into a new app project, fill in
@@ -12,7 +12,7 @@ Copy this repo (or its `AGENTS.md`) into a new app project, fill in
 `docs/APP_WORKFLOW.md` in order. Do not skip a step because it is
 familiar, and do not add a step nobody asked for.
 
-## The six skills
+## The eight skills
 
 | Skill | What it does | When it runs | Source |
 | --- | --- | --- | --- |
@@ -21,10 +21,14 @@ familiar, and do not add a step nobody asked for.
 | Karpathy guidelines | Think before coding, simplicity first, surgical changes, goal-driven execution with verifiable success criteria | Every code change | https://github.com/multica-ai/andrej-karpathy-skills |
 | Ponytail | Smallest complete change, reuse ladder, never cut security or trust-boundary validation, one small test for risky logic | Every code change | https://github.com/dietrichgebert/ponytail |
 | Hallmark | Anti-AI-slop design: hard Floor, Reflex gates, Finish checks, sloplint, hero first, fresh-context review | Web pages only, audit-first for existing designs | https://github.com/nutlope/hallmark |
+| Archify | Validated architecture, workflow, sequence, data-flow, lifecycle, ERD, class, tree, timeline, and waterfall diagrams as standalone HTML, plus one-page explainers | Diagram the planned system before building, and the finished system for docs | https://github.com/tt-a1i/archify |
 | Humanizer | Remove signs of AI writing (26 patterns), keep every supported claim, never invent a fact | User-facing prose only | https://github.com/blader/humanizer |
+| Hermes learning loop | Search memory first, capture durable learning, turn a recurring pattern into a skill, improve skills in use, prune what is superseded | After every build, before shipping | Inspired by https://github.com/NousResearch/hermes-agent — loop only, no Hermes code or runtime bundled |
 
 Full skill texts are in `skills/`. Each skill keeps its own upstream
-licence (all MIT). See `SOURCES.md`.
+licence (six MIT, Archify Apache-2.0); the Hermes learning-loop
+skill is original work for this collection, inspired by Hermes,
+not an upstream text. See `SOURCES.md`.
 
 Notes, learned the hard way:
 
@@ -41,16 +45,25 @@ Notes, learned the hard way:
 - Hallmark is never used to re-theme an existing design unless the
   user names Hallmark. A locked `templates/design.md` overrides
   themes. For an existing page, Hallmark runs as audit first.
+- Archify is the exception to the entry-point rule: its SKILL.md
+  alone cannot render anything — it needs its `bin/`, `schemas/`,
+  `renderers/`, and `references/` next to it. So `skills/archify/`
+  is the full working package (191 files, verified with
+  `node bin/archify.mjs doctor`), with only the rendered HTML
+  example outputs left out — they are regenerable with
+  `finalize`, and they were 13 MB of the upstream 18 MB.
+  Diagrams go through `finalize`'s validation gates; a
+  hand-drawn SVG is not a substitute when Archify is available.
 
 ## How to use this repo for a new app
 
-1. Read `AGENTS.md`. It is the short version of all six skills.
+1. Read `AGENTS.md`. It is the short version of all eight skills.
 2. Fill in `templates/APP_BRIEF.md` — job, audience, material,
    platform, what is out of scope. If an answer is unknown, write
    UNKNOWN, do not guess.
 3. Follow `docs/APP_WORKFLOW.md` in order: research → study →
-   plan → build smallest → design check → copy check → verify →
-   ship (only with approval).
+   plan → diagram → build smallest → design check → copy check
+   → verify → learn → ship (only with approval).
 4. Use `docs/CHECKLIST.md` before any push or release.
 5. End every coding reply with: what was skipped or not checked,
    and any risk the user must know. A known shortcut gets a

@@ -1,7 +1,9 @@
 # AGENTS.md — app-builder-skills
 
-Standing rule, set 2026-10-25: whenever we are making an app, use
-all six skills in this repo, in the order in `docs/APP_WORKFLOW.md`.
+Standing rule, set 2026-10-25, updated with Archify and the
+Hermes learning loop the same day: whenever we are making an
+app, use all eight skills in this repo, in the order in
+`docs/APP_WORKFLOW.md`.
 This file is the short version. The full texts are in `skills/`.
 
 ## 1. Research first — agent-reach
@@ -32,7 +34,20 @@ State assumptions explicitly. Present multiple interpretations
 instead of picking one silently. Push back when a simpler approach
 exists. Stop and ask when unclear — never guess silently.
 
-## 4. Smallest complete change — Ponytail (default: full)
+## 4. Diagram the system — Archify
+
+After the plan, before building, draw the system with Archify:
+architecture for components/services/boundaries, workflow for
+processes, sequence for API call chains, ERD for tables, and so
+on. Author a candidate JSON from the plan (never invent a
+component, table, or call the plan does not name), then run
+`node skills/archify/bin/archify.mjs finalize <type>
+<candidate.json> <output.html> --quality showcase --json`
+and repair any failed gate, in the candidate, before claiming
+the diagram is done. A hand-drawn SVG is not a substitute.
+Re-run Archify at the end for the finished system, for docs.
+
+## 5. Smallest complete change — Ponytail (default: full)
 
 Reuse ladder, in order: does it need to exist? → already in this
 codebase? → standard library / platform feature? → installed
@@ -62,7 +77,7 @@ criteria first (a failing test for a bug, then make it pass).
 Verify with real checks (`node --check`, JSON validation, ID
 cross-checks, a real run) before claiming done.
 
-## 5. Design check — Hallmark, audit-first
+## 6. Design check — Hallmark, audit-first
 
 Hallmark applies to web pages. It never re-themes an existing
 design unless the user names Hallmark. A locked `design.md`
@@ -81,7 +96,7 @@ recorded reason. Finish checks are craft detail, never blocking.
 For an existing page, run Hallmark as audit: report the tells,
 do not change the design until the user approves the fixes.
 
-## 6. Copy check — Humanizer, prose only
+## 7. Copy check — Humanizer, prose only
 
 Apply to user-facing prose: landing copy, docs, READMEs, launch
 posts. Not to code, data, frontmatter, or link targets.
@@ -99,6 +114,22 @@ version with varied sentence length. Never invent a name, number,
 date, quote, or citation — ask if a detail is missing. Match a
 voice sample if the user gives one. Humanizer is not a detector
 bypass.
+
+## 8. Learn, then ship — Hermes learning loop
+
+Search memory before starting; capture durable learning as
+it is verified; after a complex task, ask whether a pattern
+recurs and, if so, draft a skill for it; when corrected,
+fix the memory and skill behind the reply, not just the
+reply. At the end of a build, surface stale or conflicting
+notes and skills that did not help, as proposals — never
+as changes made on their own. Prune superseded claims so
+the current account stays true. No secrets in memory, ever.
+A new or changed skill enters the repo only with the user's
+explicit approval for that exact file list. Full text:
+`skills/hermes-learning-loop/SKILL.md`. Hermes itself —
+its code, agent, gateway, and runtime — is not bundled
+here; only its learning loop is adapted.
 
 ## End of every coding reply
 

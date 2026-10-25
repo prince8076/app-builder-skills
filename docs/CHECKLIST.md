@@ -26,6 +26,14 @@ A checked box without evidence is not checked.
       code, assets, branding, or licensing logic
 - [ ] No server, billing, DRM, or paywall cloning
 
+## Diagram (Archify)
+
+- [ ] Planned system diagrammed before building, from the
+      brief/plan only — no invented component, table, or call
+- [ ] `finalize` receipt passes; failed gates repaired in the
+      candidate, not worked around with a hand-drawn SVG
+- [ ] Finished system re-diagrammed from the code as built
+
 ## Design (web pages)
 
 - [ ] Locked design.md respected (palette, fonts, tokens)
@@ -40,6 +48,15 @@ A checked box without evidence is not checked.
 - [ ] Humanizer 26-pattern pass done on user-facing prose
 - [ ] Every claim in the copy is supported; nothing invented
 - [ ] Seeded/sample data is labelled as such, never as live
+
+## Learn (Hermes learning loop)
+
+- [ ] Memory and past work searched before starting
+- [ ] Durable learning, failures, and corrections recorded
+      with dates and sources; no secret in memory or a skill
+- [ ] Recurring pattern drafted as a skill, or the failing
+      skill repaired — proposed, not silently added
+- [ ] Superseded claims pruned from active summaries
 
 ## Ship
 
