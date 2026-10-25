@@ -1,6 +1,6 @@
 # app-builder-skills
 
-One repo, twelve skills, used for every app we build.
+One repo, thirteen skills, used for every app we build.
 
 This is not a framework and not a code library. It is the working
 agreement: how research is done, how a reference app is studied, how
@@ -12,7 +12,7 @@ Copy this repo (or its `AGENTS.md`) into a new app project, fill in
 `docs/APP_WORKFLOW.md` in order. Do not skip a step because it is
 familiar, and do not add a step nobody asked for.
 
-## The twelve skills
+## The thirteen skills
 
 | Skill | What it does | When it runs | Source |
 | --- | --- | --- | --- |
@@ -28,6 +28,7 @@ familiar, and do not add a step nobody asked for.
 | BrowserMCP | Automate the user's own logged-in browser via MCP, only when Muse's browser cannot do the job | Browser tasks needing the user's own profile, with explicit approval | https://github.com/browsermcp/mcp — capability note only, nothing installed |
 | SafeEnv | Self-hosted web app for managing a project's environment variables, with guardrails | An app's own config only, never Muse's secrets | https://github.com/david-mwas/safeenv — reference note only, nothing installed or stored |
 | Hindsight local | Retain / recall / reflect: store learnings and recall context before tasks, via a local Hindsight bank | Memory, alongside the Hermes loop, once Hindsight is installed | https://github.com/vectorize-io/hindsight — local skill only, not cloud or self-hosted server |
+| Gstack workflows | Office-hours forcing questions, pre-landing review, test-fix-verify QA, and the ship gate — adapted for Muse | Brief (office-hours), verify (review + QA), ship | Adapted from https://github.com/garrytan/gstack — original summary only, no gstack code, binary, or telemetry bundled; Ponytail governs over gstack's "boil the ocean" |
 
 Full skill texts are in `skills/`. Each skill keeps its own upstream
 licence (six MIT, Archify Apache-2.0); the Hermes learning-loop
@@ -61,7 +62,7 @@ Notes, learned the hard way:
 
 ## How to use this repo for a new app
 
-1. Read `AGENTS.md`. It is the short version of all twelve skills.
+1. Read `AGENTS.md`. It is the short version of all thirteen skills.
 2. Fill in `templates/APP_BRIEF.md` — job, audience, material,
    platform, what is out of scope. If an answer is unknown, write
    UNKNOWN, do not guess.

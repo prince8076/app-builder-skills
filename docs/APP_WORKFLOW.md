@@ -1,4 +1,4 @@
-# App workflow — use all twelve skills, in this order
+# App workflow — use all thirteen skills, in this order
 
 Do not skip a step because it is familiar. Do not add a step
 nobody asked for. If a step does not apply to this app, write
@@ -10,6 +10,11 @@ Fill in `templates/APP_BRIEF.md` and `templates/design.md` first.
 State assumptions, list multiple interpretations if the request
 is ambiguous, and ask before guessing. UNKNOWN is a valid answer;
 an invented answer is not.
+For a new product idea, run the gstack office-hours gate
+(`skills/gstack-workflows/SKILL.md` §1) here: six forcing
+questions one at a time, premise challenge, then 2–3
+approaches for the user to pick — no code until the
+approach is approved.
 
 ## 1. Research (agent-reach)
 
@@ -96,6 +101,12 @@ code/data/links unchanged.
 - Browser tasks: Muse's browser is the default. BrowserMCP
   is a fallback only, with the user's explicit approval,
   for a task that needs their own logged-in browser profile.
+- Gstack review + QA (`skills/gstack-workflows/SKILL.md`
+  §2–§3): pre-landing review, read-only first — scope
+  drift, gate scan, critical pass with sideways sweep —
+  then test-fix-verify QA with a regression test written
+  before each repair and a verified / best-effort /
+  reverted classification per issue.
 
 ## 9. Learn (Hermes learning loop + Hindsight local)
 
@@ -130,3 +141,8 @@ List the exact files changed, the verified checks, what was
 skipped/not checked, and any risk. Push, publish, or release
 only after the user approves that exact list. A push approval
 covers exactly those files — nothing else, no extra "cleanup".
+Gstack ship gate (`skills/gstack-workflows/SKILL.md` §4):
+merge the base before tests, review + QA on the diff,
+version bump, CHANGELOG, docs audit on every ship, then
+verify the frozen tree before pushing — and push only on
+that approval, never as "routine" work.

@@ -64,6 +64,20 @@ Notes:
   self-hosted Hindsight skills were deliberately not
   bundled — local only, matching this stack's
   local-first rule.
+- gstack-workflows: original summary adaptation of four
+  workflows from garrytan/gstack (MIT) — office-hours,
+  review, qa, ship. No upstream text, code, binary,
+  telemetry, or memory system is bundled, and gstack
+  itself is not installed by copying this repo. The
+  adaptation deliberately drops gstack's Claude
+  Code-specific harness (skill-start binary, slash
+  commands, AskUserQuestion, GBrain, Aside, Greptile,
+  Capy) and overrides two upstream defaults: its
+  "boil the ocean" completeness principle does not
+  override Karpathy + Ponytail here, and its ship
+  workflow's "routine work needs no confirmation"
+  does not override this repo's approval-only rule
+  for pushes and releases.
 - The workflow, AGENTS.md, docs, and templates in this repo
   are new work for this collection, under MIT, unless a
   project that copies this repo says otherwise.

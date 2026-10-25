@@ -70,6 +70,21 @@ A checked box without evidence is not checked.
 - [ ] Hindsight local, if installed: recall before the task,
       retain after it; if not installed, not assumed done
 
+## Gstack gates (adapted)
+
+- [ ] Office-hours, for a new idea: six forcing questions
+      asked one at a time, premises agreed, approach
+      picked by the user before any code
+- [ ] Review, pre-landing: scope drift checked, gate scan
+      of test/CI/config edits done, critical pass with
+      sideways sweep, fixes re-reviewed
+- [ ] QA: regression test written before each repair,
+      minimal fix, re-test, each issue classified
+      verified / best-effort / reverted
+- [ ] Ship: base merged before tests, version bump,
+      CHANGELOG, docs audit, frozen tree verified
+      before pushing
+
 ## Ship
 
 - [ ] Success criteria from the brief, verified one by one

@@ -2,7 +2,7 @@
 
 Standing rule, set 2026-10-25, updated with Archify, the
 Hermes learning loop, and four more the same day: whenever
-we are making an app, use all twelve skills in this repo,
+we are making an app, use all thirteen skills in this repo,
 in the order in `docs/APP_WORKFLOW.md`. The four newest
 are supporting skills (see §§9–12), not extra workflow
 steps: they guard summaries, browser work, app config,
@@ -180,6 +180,49 @@ goes in a repo. It does not replace the Hermes
 learning loop or Muse's own memory — it is a second
 bank, used only once installed. Full skill:
 `skills/hindsight-local/SKILL.md`.
+
+## 13. Gstack workflows — adapted (office-hours, review, qa, ship)
+
+Adapted from garrytan/gstack (MIT), original summary
+only — no gstack code, binary, telemetry, or memory
+system is bundled, and gstack itself is not installed
+by this repo. Full file: `skills/gstack-workflows/SKILL.md`.
+
+- Office-hours: at the brief stage, no code until the
+  design is agreed. Ask the six forcing questions one
+  at a time (demand reality, status quo, desperate
+  specificity, narrowest wedge, observation and
+  surprise, future-fit), push until answers are
+  specific and evidence-based, then challenge the
+  premises and offer 2–3 approaches (one minimal
+  viable, one ideal, one lateral) for the user to
+  pick before any design doc is written.
+- Review: pre-landing, read-only first. Check scope
+  drift, then the checklist, then a gate scan of
+  test/CI/config edits, then a critical pass with a
+  sideways sweep. Data loss, trust-boundary bypass,
+  or uncapped spend is forced CRITICAL. Fix only
+  after the pass, then re-review.
+- QA: test, fix, verify. Tier decides what gets
+  fixed (quick = critical+high, standard = +medium,
+  exhaustive = +low). Regression test before repair,
+  with a value card (protects / fails_when / why_new
+  / seam / no_claim); minimal fix; re-test; classify
+  verified, best-effort, or reverted. Stop rules:
+  evaluate every 5 fixes, stop after 2 reverts or
+  one unrelated-file edit, hard cap 50 fixes.
+- Ship: integrate → test and review → prepare
+  release → verify frozen content → push and
+  publish. Version bump, CHANGELOG, and a docs
+  audit on every ship. The push/publish step still
+  needs the user's approval for that exact file
+  list — gstack's "routine work needs no
+  confirmation" does not apply here.
+- Governing conflict, resolved: gstack's "boil the
+  ocean" (prefer the full build over a 90% shortcut)
+  does NOT override Karpathy + Ponytail in this
+  stack. These workflows gate the requested scope;
+  they never expand it.
 
 ## End of every coding reply
 
